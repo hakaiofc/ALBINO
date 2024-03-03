@@ -26,15 +26,14 @@ ss:Toggle("Autofarm HITKILL",function(t)
     farm2 = t
     while farm2 do wait()
         pcall(function()
-local args = {
-    [1] = "Left Punch"
-}
-local args = {
-    [1] = "Right Punch"
-
-           local Event = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Attack")Event:FireServer(unpack(args))
-           local Event = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Attack")Event:FireServer(unpack(args))
-          end
+           game:GetService("ReplicatedStorage").Attack:FireServer(math.random(0,0))
+          for i,v in pairs(game:GetService("Workspace").PunchingBag:GetChildren()) do 
+             if v:IsA("MeshPart") then 
+                end 
+             end
+          end) 
+       end 
+    end)
          end) 
        end 
     end)
