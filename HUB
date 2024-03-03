@@ -24,12 +24,10 @@ VIM = game:GetService("VirtualInputManager")
 --MAIN SCRIPT
 ss:Toggle("Autofarm HITKILL",function(t)
     farm2 = t
-       pcall(function()
+    while farm2 do wait()
+        pcall(function()
            game:GetService("ReplicatedStorage").Attack:FireServer(math.random(0,0))
-          for i,v in pairs(game:GetService("Workspace").PunchingBag:GetChildren()) do 
-             if v:IsA("MeshPart") then 
-              v.CFrame = CFrame.new(-150.175339, 17.7124176, 138.312851)
-             end
+           game:GetService("ReplicatedStorage").Attack:FireServer(math.random(0,0))
           end) 
        end 
     end)
