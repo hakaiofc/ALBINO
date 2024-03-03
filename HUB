@@ -30,7 +30,6 @@ ss:Toggle("Autofarm HITKILL",function(t)
           for i,v in pairs(game:GetService("Workspace").PunchingBag:GetChildren()) do 
              if v:IsA("MeshPart") then 
                 end 
-             end
           end) 
        end 
     end)
