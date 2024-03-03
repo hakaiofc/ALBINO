@@ -22,12 +22,12 @@ LP = game.Players.LocalPlayer
 VIM = game:GetService("VirtualInputManager")
 
 --MAIN SCRIPT
-ss:Toggle("Autofarm HITKILL",function(t)
+ss:Toggle("Autofarm Hits",function(t)
     farm2 = t
     while farm2 do wait()
         pcall(function()
-           game:GetService("ReplicatedStorage").Attack:FireServer(math.random(0,0))
-           game:GetService("ReplicatedStorage").Attack:FireServer(math.random(0,0))
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Attack"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Attack"):FireServer()
           end) 
        end 
     end)
