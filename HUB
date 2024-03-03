@@ -24,15 +24,25 @@ VIM = game:GetService("VirtualInputManager")
 --MAIN SCRIPT
 ss:Toggle("Autofarm HITKILL",function(t)
     farm2 = t
-    while farm2 do wait()
-        pcall(function()
-           game:GetService("ReplicatedStorage").Attack:FireServer(math.random(0,0))
-          for i,v in pairs(game:GetService("Workspace").PunchingBag:GetChildren()) do 
-             if v:IsA("MeshPart") then 
-                end 
-          end) 
-       end 
-    end)
+_G.BILLS_OFC = true
+local args = {
+    [1] = "Left Punch"
+}
+local args = {
+    [1] = "Right Punch"
+
+while _G.BILLS_OFC do
+wait()
+if _G.BILLS_OFC == false then
+return
+end
+if _G.BILLS_OFC == true then
+local Event = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Attack")
+Event:FireServer(unpack(args))
+local Event = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Attack")
+Event:FireServer(unpack(args))
+end
+end
 
 ss:Toggle("Autofarm Pushups",function(t)
     farm = t
