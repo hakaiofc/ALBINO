@@ -27,7 +27,7 @@ ss:Toggle("Autofarm Pushups",function(t)
     farm = t
     while farm do wait(0.485) 
       pcall(function()
-       game:GetService("ReplicatedStorage").Remotes.PushUp:FireServer()
+       game:GetService("ReplicatedStorage").Remotes.Pushup:FireServer()
      end)
   end
 end) 
@@ -36,7 +36,7 @@ ss:Toggle("Autofarm Situps",function(t)
     farm3 = t 
     while farm3 do wait(0.485) 
       pcall(function()
-       game:GetService("ReplicatedStorage").Remotes.SitUp:FireServer()
+       game:GetService("ReplicatedStorage").Remotes.Situp:FireServer()
      end)
   end
 end) 
@@ -55,6 +55,15 @@ dumb = t
 while dumb do wait(0.485) 
     pcall(function()
 game:GetService("ReplicatedStorage").Remotes.Dumbbell:FireServer("Equip") 
+game:GetService("ReplicatedStorage").Remotes.Dumbbell:FireServer("Rep",math.random(1,2))
+end) 
+end 
+end)
+
+ss:Toggle("AutoUse DumbellsV2",function(t)
+dumb = t 
+while dumb do wait(0.485) 
+    pcall(function()
 game:GetService("ReplicatedStorage").Remotes.Dumbbell:FireServer("Rep",math.random(1,2))
 end) 
 end 
