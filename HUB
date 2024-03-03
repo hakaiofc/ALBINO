@@ -106,7 +106,7 @@ end)
 
 ss:Toggle("AutoUse DumbellsV2",function(t)
 dumb = t 
-while dumb do wait(0.35) 
+while dumb do wait(0.48) 
     pcall(function()
 game:GetService("ReplicatedStorage").Remotes.Dumbbell:FireServer()
 end) 
