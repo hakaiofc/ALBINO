@@ -34,7 +34,8 @@ local args = {
 
            local Event = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Attack")Event:FireServer(unpack(args))
            local Event = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Attack")Event:FireServer(unpack(args))
-          end) 
+          end
+         end) 
        end 
     end)
 
