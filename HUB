@@ -67,6 +67,15 @@ end )
 end 
 end) 
 
+ss:Toggle("AutoClick Benchpress OPV2",function(t)
+bench = t 
+while bench do wait() 
+    pcall(function()
+game:GetService("ReplicatedStorage").Remotes.BenchToggle:FireServer()
+end ) 
+end 
+end) 
+
 ss:Toggle("AutoUse Dumbells",function(t)
 dumb = t 
 while dumb do wait(0.485) 
