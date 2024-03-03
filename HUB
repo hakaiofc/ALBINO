@@ -1,0 +1,61 @@
+local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/Rgb%20Ui"))()
+
+MAINTTL = "ALBINO HUB V1 "
+
+local win = VLib:Window("COBRA KAI V1", Color3.fromRGB(196, 40, 28))
+
+local ss = win:Tab("MENU")
+local sss = win:Tab("CREDITS")
+
+--ANTI AFK 
+pcall(function()
+    local VirtualUser=game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+    warn("anti-afk")
+    VirtualUser:CaptureController()
+    VirtualUser:ClickButton2(Vector2.new())
+       end)
+    end) 
+
+--GLOBALS 
+LP = game.Players.LocalPlayer
+VIM = game:GetService("VirtualInputManager")
+
+--MAIN SCRIPT
+
+ss:Toggle("Autofarm Pushups",function(t)
+    farm = t
+    while farm do wait(0.485) 
+      pcall(function()
+       game:GetService("ReplicatedStorage").Remotes.PushUp:FireServer()
+     end)
+  end
+end) 
+
+ss:Toggle("Autofarm Situps",function(t)
+    farm3 = t 
+    while farm3 do wait(0.485) 
+      pcall(function()
+       game:GetService("ReplicatedStorage").Remotes.SitUp:FireServer()
+     end)
+  end
+end) 
+
+ss:Toggle("AutoClick Benchpress OP",function(t)
+bench = t 
+while bench do wait(0.485) 
+    pcall(function()
+game:GetService("ReplicatedStorage").Remotes.BenchToggle:FireServer()
+end ) 
+end 
+end) 
+
+ss:Toggle("AutoUse Dumbells",function(t)
+dumb = t 
+while dumb do wait(0.485) 
+    pcall(function()
+game:GetService("ReplicatedStorage").Remotes.Dumbbell:FireServer("Equip") 
+game:GetService("ReplicatedStorage").Remotes.Dumbbell:FireServer("Rep",math.random(1,2))
+end) 
+end 
+end)
