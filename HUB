@@ -22,6 +22,28 @@ LP = game.Players.LocalPlayer
 VIM = game:GetService("VirtualInputManager")
 
 --MAIN SCRIPT
+ss:Toggle("Autofarm HITKILL",function(t)
+    farm2 = t
+    while farm2 do wait()
+        pcall(function()
+_G.BILLS_OFC = true
+local args = {
+    [1] = "Left Punch"
+}
+local args = {
+    [1] = "Right Punch"
+if _G.BILLS_OFC == false then
+return
+end
+if _G.BILLS_OFC == true then
+local Event = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Attack")
+Event:FireServer(unpack(args))
+local Event = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Attack")
+Event:FireServer(unpack(args))
+end
+          end) 
+       end 
+    end)
 
 ss:Toggle("Autofarm Pushups",function(t)
     farm = t
