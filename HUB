@@ -33,9 +33,6 @@ ss:Toggle("Autofarm HITKILL",function(t)
           end) 
        end 
     end)
-         end) 
-       end 
-    end)
 
 ss:Toggle("Autofarm Pushups",function(t)
     farm = t
