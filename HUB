@@ -1,4 +1,4 @@
-local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/Rgb%20Ui"))()
+local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/hakaiofc/Hub/main/colors"))()
 
 MAINTTL = "ALBINO HUB V1 "
 
